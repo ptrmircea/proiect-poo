@@ -1,5 +1,4 @@
-package pulover_cardigan;
-
+package pulovar_cardigan;
 import comun.Imbracaminte;
 
 public class Pulovar extends Imbracaminte {
