@@ -10,7 +10,7 @@ public class Imbracaminte implements GestiuneStocPret {
 
     public Imbracaminte() {
         this.brand = "necunoscut";
-        this.marime = "M";
+        this.marime = "necunoscut";
         this.culoare = "necunoscut";
         this.material = "necunoscut";
         this.pret = 0;
