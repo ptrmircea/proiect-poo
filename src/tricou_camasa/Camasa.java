@@ -7,6 +7,7 @@ public class Camasa extends Imbracaminte {
     private boolean manecaLunga;
     private String tipGuler;
     private String croiala;
+    private String model;
 
     public Camasa() {
         super();
@@ -14,14 +15,16 @@ public class Camasa extends Imbracaminte {
         this.manecaLunga = false;
         this.tipGuler = "necunoscut";
         this.croiala = "necunoscut";
+        this.model = "necunoscut";
     }
 
-    public Camasa(String brand, String marime, String culoare, String material, double pret, int stoc, boolean eleganta, boolean manecaLunga, String tipGuler, String croiala) {
+    public Camasa(String brand, String marime, String culoare, String material, double pret, int stoc, boolean eleganta, boolean manecaLunga, String tipGuler, String croiala, String model) {
         super(brand, marime, culoare, material, pret, stoc);
         this.eleganta = eleganta;
         this.manecaLunga = manecaLunga;
         this.tipGuler = tipGuler;
         this.croiala = croiala;
+        this.model = model;
     }
 
     public Camasa(Camasa c) {
@@ -30,6 +33,7 @@ public class Camasa extends Imbracaminte {
         this.manecaLunga = c.manecaLunga;
         this.tipGuler = c.tipGuler;
         this.croiala = c.croiala;
+        this.model = c.model;
     }
 
     public boolean isEleganta() {
@@ -64,8 +68,16 @@ public class Camasa extends Imbracaminte {
         this.croiala = croiala;
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
     @Override
     public String toString() {
-        return "Camasa - " + super.toString() + ", Eleganta: " + (eleganta ? "da" : "nu") + ", Maneca lunga: " + (manecaLunga ? "da" : "nu") + ", Guler: " + tipGuler + ", Croiala: " + croiala;
+        return "Camasa - " + super.toString() + ", Eleganta: " + (eleganta ? "da" : "nu") + ", Maneca lunga: " + (manecaLunga ? "da" : "nu") + ", Guler: " + tipGuler + ", Croiala: " + croiala + ", Model: " + model;
     }
 }

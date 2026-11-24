@@ -14,8 +14,8 @@ public class MainTricouCamasa {
         System.out.println("Camasa: " + camasaFaraArg);
 
         Imbracaminte articol = new Imbracaminte("Levi's", "32", "albastru", "denim", 150.0, 5);
-        Tricou tricou = new Tricou("Nike", "M", "albastru", "bumbac", 100.0, 20, true, true, "rotund", "regular");
-        Camasa camasa = new Camasa("Zara", "L", "alb", "bumbac", 200.0, 8, true, true, "clasic", "slim");
+        Tricou tricou = new Tricou("Nike", "M", "albastru", "bumbac", 100.0, 20, true, true, "rotund", "regular", "Romania");
+        Camasa camasa = new Camasa("Zara", "L", "alb", "bumbac", 200.0, 8, true, true, "clasic", "slim", "dungi");
 
         System.out.println();
         System.out.println("Constructori cu toate argumentele:");
@@ -52,18 +52,20 @@ public class MainTricouCamasa {
         tricou.setManecaScurta(false);
         tricou.setTipGuler("V");
         tricou.setCroiala("slim");
+        tricou.setTaraProductie("Turcia");
 
         camasa.setCuloare("albastru");
         camasa.setEleganta(false);
         camasa.setManecaLunga(false);
         camasa.setTipGuler("polo");
         camasa.setCroiala("regular");
+        camasa.setModel("carouri");
 
         System.out.println();
         System.out.println("Set si get:");
         System.out.println("Articol: " + articol.getBrand() + ", " + articol.getMarime() + ", " + articol.getCuloare() + ", " + articol.getMaterial() + ", " + articol.getPret() + ", " + articol.getStoc());
-        System.out.println("Tricou: " + tricou.getMarime() + ", imprimeu " + tricou.isAreImprimeu() + ", maneca scurta " + tricou.isManecaScurta() + ", guler " + tricou.getTipGuler() + ", croiala " + tricou.getCroiala());
-        System.out.println("Camasa: " + camasa.getCuloare() + ", eleganta " + camasa.isEleganta() + ", maneca lunga " + camasa.isManecaLunga() + ", guler " + camasa.getTipGuler() + ", croiala " + camasa.getCroiala());
+        System.out.println("Tricou: " + tricou.getMarime() + ", imprimeu " + tricou.isAreImprimeu() + ", maneca scurta " + tricou.isManecaScurta() + ", guler " + tricou.getTipGuler() + ", croiala " + tricou.getCroiala() + ", tara " + tricou.getTaraProductie());
+        System.out.println("Camasa: " + camasa.getCuloare() + ", eleganta " + camasa.isEleganta() + ", maneca lunga " + camasa.isManecaLunga() + ", guler " + camasa.getTipGuler() + ", croiala " + camasa.getCroiala() + ", model " + camasa.getModel());
 
         articol.aplicaReducere(50);
         tricou.aplicaReducere(10);
